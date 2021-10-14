@@ -21,12 +21,12 @@ class Form extends Component {
     return (
       <div>
         <div>
-          <label htmlFor="name">
+          <label htmlFor="name-input">
             Nome
             <input
               data-testid="name-input"
               type="text"
-              id="name"
+              id="name-input"
               name="cardName"
               value={ cardName }
               onChange={ onInputChange }
@@ -35,11 +35,11 @@ class Form extends Component {
         </div>
 
         <div>
-          <label htmlFor="description">
+          <label htmlFor="description-input">
             Descrição
             <textarea
               data-testid="description-input"
-              id="description"
+              id="description-input"
               name="cardDescription"
               value={ cardDescription }
               onChange={ onInputChange }
@@ -48,12 +48,12 @@ class Form extends Component {
         </div>
 
         <div>
-          <label htmlFor="attr1">
+          <label htmlFor="attr1-input">
             Att01
             <input
               data-testid="attr1-input"
               type="number"
-              id="attr1"
+              id="attr1-input"
               name="cardAttr1"
               value={ cardAttr1 }
               onChange={ onInputChange }
@@ -62,12 +62,12 @@ class Form extends Component {
         </div>
 
         <div>
-          <label htmlFor="attr2">
+          <label htmlFor="attr2-input">
             Att02
             <input
               data-testid="attr2-input"
               type="number"
-              id="attr2"
+              id="attr2-input"
               name="cardAttr2"
               value={ cardAttr2 }
               onChange={ onInputChange }
@@ -76,12 +76,12 @@ class Form extends Component {
         </div>
 
         <div>
-          <label htmlFor="attr3">
+          <label htmlFor="attr3-input">
             Att03
             <input
               data-testid="attr3-input"
               type="number"
-              id="attr3"
+              id="attr3-input"
               name="cardAttr3"
               value={ cardAttr3 }
               onChange={ onInputChange }
@@ -90,12 +90,12 @@ class Form extends Component {
         </div>
 
         <div>
-          <label htmlFor="image">
+          <label htmlFor="image-input">
             Imagem
             <input
               data-testid="image-input"
               type="text"
-              id="image"
+              id="image-input"
               name="cardImage"
               value={ cardImage }
               onChange={ onInputChange }
