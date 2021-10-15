@@ -25,6 +25,7 @@ class App extends React.Component {
       hasTrunfo: false,
       deckCard: [],
       checkedTrunfo: false,
+      isSaveButtonDisabled: true,
     };
   }
 

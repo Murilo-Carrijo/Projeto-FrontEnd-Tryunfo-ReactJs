@@ -115,7 +115,6 @@ class Form extends Component {
             <option value="muito raro">Muito Raro</option>
           </select>
         </div>
-
         {
           hasTrunfo ? (
             <p>Você já tem um Super Trunfo em seu Baralho</p>
