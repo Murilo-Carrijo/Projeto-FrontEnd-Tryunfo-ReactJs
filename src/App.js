@@ -10,7 +10,8 @@ class App extends React.Component {
     this.attrValidation = this.attrValidation.bind(this);
     this.inputValidation = this.inputValidation.bind(this);
     this.onSaveButtonClick = this.onSaveButtonClick.bind(this);
-    this.validationCardTrunfo = this.validationCardTrunfo.bind(this);
+    this.isCardTrunfo = this.isCardTrunfo.bind(this);
+    this.isSuperTrunfo = this.isSuperTrunfo.bind(this);
 
     this.state = {
       cardName: '',
@@ -22,7 +23,8 @@ class App extends React.Component {
       cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
-      cardList: [],
+      deckCard: [],
+      checkedTrunfo: false,
     };
   }
 
@@ -37,11 +39,11 @@ class App extends React.Component {
   onSaveButtonClick() {
     const { cardName, cardDescription, cardAttr1,
       cardAttr2, cardAttr3, cardImage, cardRare, cardTrunfo } = this.state;
-    const result = this.validationCardTrunfo();
+    const result = this.isCardTrunfo();
     if (cardTrunfo && result === undefined) {
       this.setState((prevState) => ({
-        cardList: [
-          ...prevState.cardList,
+        deckCard: [
+          ...prevState.deckCard,
           {
             cardName,
             cardDescription,
@@ -64,8 +66,8 @@ class App extends React.Component {
       }));
     } else {
       this.setState((prevState) => ({
-        cardList: [
-          ...prevState.cardList,
+        deckCard: [
+          ...prevState.deckCard,
           {
             cardName,
             cardDescription,
@@ -87,9 +89,9 @@ class App extends React.Component {
     }
   }
 
-  validationCardTrunfo() {
-    const { cardList } = this.state;
-    const filtro = cardList.find((card) => card.cardTrunfo);
+  isCardTrunfo() {
+    const { deckCard } = this.state;
+    const filtro = deckCard.find((card) => card.cardTrunfo);
     return filtro;
   }
 
@@ -132,6 +134,19 @@ class App extends React.Component {
     this.setState({
       isSaveButtonDisabled: true,
     });
+  }
+
+  isSuperTrunfo() {
+    const { checkedTrunfo } = this.state;
+    if (checkedTrunfo) {
+      this.setState({
+        checkedTrunfo: false,
+      });
+    } else {
+      this.setState({
+        checkedTrunfo: true,
+      });
+    }
   }
 
   render() {
