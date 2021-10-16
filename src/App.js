@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from './components/Card';
 import Form from './components/Form';
+import DeckCard from './components/DeckCard';
 
 class App extends React.Component {
   constructor() {
@@ -178,6 +179,9 @@ class App extends React.Component {
           cardImage={ valueState.cardImage }
           cardRare={ valueState.cardRare }
           cardTrunfo={ valueState.cardTrunfo }
+        />
+        <DeckCard
+          deckCard={ valueState.deckCard }
         />
       </div>
     );
