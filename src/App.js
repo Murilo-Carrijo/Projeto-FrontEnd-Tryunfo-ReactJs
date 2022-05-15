@@ -3,6 +3,8 @@ import Card from './components/Card';
 import Form from './components/Form';
 import DeckCard from './components/DeckCard';
 
+import './style/App.css';
+
 class App extends React.Component {
   constructor() {
     super();
@@ -154,35 +156,42 @@ class App extends React.Component {
   render() {
     const valueState = this.state;
     return (
-      <div>
-        <h1>Tryunfo!!</h1>
-        <Form
-          cardName={ valueState.cardName }
-          cardDescription={ valueState.cardDescription }
-          cardAttr1={ valueState.cardAttr1 }
-          cardAttr2={ valueState.cardAttr2 }
-          cardAttr3={ valueState.cardAttr3 }
-          cardImage={ valueState.cardImage }
-          cardRare={ valueState.cardRare }
-          cardTrunfo={ valueState.cardTrunfo }
-          hasTrunfo={ valueState.hasTrunfo }
-          isSaveButtonDisabled={ valueState.isSaveButtonDisabled }
-          onInputChange={ this.onInputChange }
-          onSaveButtonClick={ this.onSaveButtonClick }
-        />
-        <Card
-          cardName={ valueState.cardName }
-          cardDescription={ valueState.cardDescription }
-          cardAttr1={ valueState.cardAttr1 }
-          cardAttr2={ valueState.cardAttr2 }
-          cardAttr3={ valueState.cardAttr3 }
-          cardImage={ valueState.cardImage }
-          cardRare={ valueState.cardRare }
-          cardTrunfo={ valueState.cardTrunfo }
-        />
-        <DeckCard
-          deckCard={ valueState.deckCard }
-        />
+      <div className="forms">
+        <h1 className="title">Tryunfo!!</h1>
+        <div className="container">
+          <Form
+            cardName={ valueState.cardName }
+            cardDescription={ valueState.cardDescription }
+            cardAttr1={ valueState.cardAttr1 }
+            cardAttr2={ valueState.cardAttr2 }
+            cardAttr3={ valueState.cardAttr3 }
+            cardImage={ valueState.cardImage }
+            cardRare={ valueState.cardRare }
+            cardTrunfo={ valueState.cardTrunfo }
+            hasTrunfo={ valueState.hasTrunfo }
+            isSaveButtonDisabled={ valueState.isSaveButtonDisabled }
+            onInputChange={ this.onInputChange }
+            onSaveButtonClick={ this.onSaveButtonClick }
+          />
+          <div className="card-containe">
+            <Card
+              cardName={ valueState.cardName }
+              cardDescription={ valueState.cardDescription }
+              cardAttr1={ valueState.cardAttr1 }
+              cardAttr2={ valueState.cardAttr2 }
+              cardAttr3={ valueState.cardAttr3 }
+              cardImage={ valueState.cardImage }
+              cardRare={ valueState.cardRare }
+              cardTrunfo={ valueState.cardTrunfo }
+            />
+          </div>
+        </div>
+        <h1 className="title-deck"> DeckCard </h1>
+        <div className="container-dackcard">
+          <DeckCard
+            deckCard={ valueState.deckCard }
+          />
+        </div>
       </div>
     );
   }

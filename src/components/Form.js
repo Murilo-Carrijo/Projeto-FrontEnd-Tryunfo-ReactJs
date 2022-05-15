@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../style/Form.css';
 
 class Form extends Component {
   render() {
@@ -19,11 +20,15 @@ class Form extends Component {
     } = this.props;
 
     return (
-      <div>
-        <div>
-          <label htmlFor="name-input">
+      <div className="form-container">
+        <div className="container-text">
+          <label
+            htmlFor="name-input"
+            className="label-input"
+          >
             Nome
             <input
+              className="input-text"
               data-testid="name-input"
               type="text"
               id="name-input"
@@ -34,10 +39,14 @@ class Form extends Component {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="description-input">
+        <div className="container-text">
+          <label
+            className="label-input"
+            htmlFor="description-input"
+          >
             Descrição
             <textarea
+              className="input-text"
               data-testid="description-input"
               id="description-input"
               name="cardDescription"
@@ -47,10 +56,14 @@ class Form extends Component {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="attr1-input">
+        <div className="container-text">
+          <label
+            className="label-input"
+            htmlFor="attr1-input"
+          >
             Att01
             <input
+              className="input-text"
               data-testid="attr1-input"
               type="number"
               id="attr1-input"
@@ -61,10 +74,14 @@ class Form extends Component {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="attr2-input">
+        <div className="container-text">
+          <label
+            className="label-input"
+            htmlFor="attr2-input"
+          >
             Att02
             <input
+              className="input-text"
               data-testid="attr2-input"
               type="number"
               id="attr2-input"
@@ -75,10 +92,14 @@ class Form extends Component {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="attr3-input">
+        <div className="container-text">
+          <label
+            className="label-input"
+            htmlFor="attr3-input"
+          >
             Att03
             <input
+              className="input-text"
               data-testid="attr3-input"
               type="number"
               id="attr3-input"
@@ -89,10 +110,14 @@ class Form extends Component {
           </label>
         </div>
 
-        <div>
-          <label htmlFor="image-input">
+        <div className="container-text">
+          <label
+            className="label-input"
+            htmlFor="image-input"
+          >
             Imagem
             <input
+              className="input-text"
               data-testid="image-input"
               type="text"
               id="image-input"
@@ -102,41 +127,43 @@ class Form extends Component {
             />
           </label>
         </div>
-
-        <div>
-          <select
-            data-testid="rare-input"
-            name="cardRare"
-            value={ cardRare }
-            onChange={ onInputChange }
-          >
-            <option value="normal">Normal</option>
-            <option value="raro">Raro</option>
-            <option value="muito raro">Muito Raro</option>
-          </select>
+        <div className="rare-trunfo-container">
+          <div className="rare-container">
+            <select
+              data-testid="rare-input"
+              name="cardRare"
+              value={ cardRare }
+              onChange={ onInputChange }
+            >
+              <option value="normal">Normal</option>
+              <option value="raro">Raro</option>
+              <option value="muito raro">Muito Raro</option>
+            </select>
+          </div>
+          {
+            hasTrunfo ? (
+              <p>Você já tem um Super Trunfo em seu Baralho</p>
+            ) : (
+              <div className="trunfo-container">
+                <label htmlFor="trunfo-input">
+                  <input
+                    type="checkbox"
+                    name="cardTrunfo"
+                    id="trunfo-input"
+                    data-testid="trunfo-input"
+                    checked={ cardTrunfo }
+                    onChange={ onInputChange }
+                  />
+                  Super Trybe Trunfo
+                </label>
+              </div>
+            )
+          }
         </div>
-        {
-          hasTrunfo ? (
-            <p>Você já tem um Super Trunfo em seu Baralho</p>
-          ) : (
-            <div>
-              <label htmlFor="trunfo-input">
-                <input
-                  type="checkbox"
-                  name="cardTrunfo"
-                  id="trunfo-input"
-                  data-testid="trunfo-input"
-                  checked={ cardTrunfo }
-                  onChange={ onInputChange }
-                />
-                Super Trybe Trunfo
-              </label>
-            </div>
-          )
-        }
 
         <div>
           <button
+            className="save-button"
             data-testid="save-button"
             type="button"
             disabled={ isSaveButtonDisabled }

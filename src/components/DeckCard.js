@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
+import '../style/DeckCard.css';
 
 class DeckCard extends React.Component {
   selfDelete = ({ target }) => {
@@ -23,7 +24,10 @@ class DeckCard extends React.Component {
         } = card;
 
         return (
-          <div key={ cardName }>
+          <div
+            className="deck-container"
+            key={ cardName }
+          >
             <Card
               cardName={ cardName }
               cardDescription={ cardDescription }
@@ -34,7 +38,12 @@ class DeckCard extends React.Component {
               cardRare={ cardRare }
               cardTrunfo={ cardTrunfo }
             />
-            <button type="button" onClick={ this.selfDelete } data-testid="delete-button">
+            <button
+              className="button-exclude"
+              type="button"
+              onClick={ this.selfDelete }
+              data-testid="delete-button"
+            >
               Excluir
             </button>
           </div>

@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+.card-containe {
+  background: url('https://i.pinimg.com/474x/be/84/8c/be848c7f799bdd6718f37b8fd3a79c7f.jpg') center/cover;
+  border-radius: 16px;
+  color: #fffffe;
+  font-family: 'Macondo', cursive;
+  margin-bottom: 16px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  height: 150px;
+  width: 200px;
+  border-radius: 6px;
+}
+
+h1 {
+  margin: 8px;
+}
+
+p {
+  margin-bottom: 8px;
+}

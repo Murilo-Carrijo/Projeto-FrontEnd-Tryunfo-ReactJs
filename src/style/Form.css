@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+.form-container {
+  background-color: #16161a;
+  border-radius: 16px;
+  border: 2px solid #72757e;
+  color: #fffffe;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Macondo', cursive;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 16px;
+  font-size: bold;
+  min-width: 400px;
+  /* min-height: 500px; */
+}
+
+.container-text {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.label-input {
+ margin-left: 16px;
+}
+.input-text {
+  border-radius: 12px;
+  box-shadow: 0px 0px 8px #2cb67d;
+  height: 32px;
+  margin-left: 8px;
+  min-width: 93%;
+}
+
+.rare-trunfo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.rare-container {
+  margin-right: 16px;
+}
+
+.save-button {
+  border-radius: 20px;
+  background-color: #2cb67d;
+  height: 32px;
+  margin-left: 8px;
+  min-width: 93%;
+}
