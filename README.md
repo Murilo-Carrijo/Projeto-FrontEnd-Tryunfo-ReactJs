@@ -20,7 +20,7 @@ Neste projeto, foram utilizadas as seguitens habilidades:
 # Como rodar o projeto
 Para rodar o projeto localmente:
   
-  * clone o projeto para a sua maquina: `git clone ...`
+  * clone o projeto para a sua maquina: `git clone git@github.com:Murilo-Carrijo/Tryunfo.git`
 
   * instale as dependencias: `npm install`
 
